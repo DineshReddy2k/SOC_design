@@ -1,5 +1,15 @@
 # SOC_design
 
+## RADAR_example
+### Hardware setup
+
+- The System-on-Chip (SoC) design in Vivado incorporates a custom IP block named "phase_ctrl_ip_0". This block receives inputs from software to generate the desired phase for a Direct Digital Synthesizer (DDS) compiler. The DDS compiler utilizes this phase to produce a chirp signal, which can be observed using the System Integrated Logic Analyzer (System ILA).
+
+![seq_det](https://github.com/DineshReddy2k/SOC_design/blob/main/FMCW_radar/fmcw_radar.png)
+- The System ILA acts as an in-system debugging tool, capturing and displaying waveform data directly from the FPGA hardware during operation.
+
+![seq_det](https://github.com/DineshReddy2k/SOC_design/blob/main/FMCW_radar/chirp.png)
+
 ## Gpio_example
 ### Hardware setup
 
@@ -17,4 +27,5 @@
 - After the project is successfully created, you need to write a driver to access the GPIO. Xilinx provides a driver for this purpose, which can be used by adding the xgpio.h header file along with the xparameters.h header file.
 - The software code sequence involves initializing and configuring the GPIO, followed by writing values to or reading values from the GPIO.
 - After writing the code, build and program the FPGA. Finally, run the application.
+
 
